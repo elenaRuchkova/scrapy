@@ -42,12 +42,13 @@ class MovieSpider(scrapy.Spider):
             imdb = tree.xpath("//*[@id='__next']//span/div/div[2]/div[1]/span/text()")[0]
 
             item =  { 'title': title,
-                        'genre': genre,
-                        'producer' : producer,
-                        'country': country,
-                        'year': year,
-                        'year_duble': year_duble, 
-                        'imdb': imdb #  imdb_href 
+                      'genre': genre,
+                      'producer' : producer,
+                      'country': country,
+                      'country_duble': country_duble,
+                      'year': year,
+                      'year_duble': year_duble, 
+                      'imdb': imdb  #  imdb_href 
                     }
 
         yield item
